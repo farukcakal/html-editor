@@ -59,13 +59,13 @@ function drop(e) {
         const imgContainer = document.createElement('div'); // Resmi içine koymak için bir div oluştur
         imgContainer.classList.add('element');  // Stil için class ekle
         imgContainer.style.position = 'relative';  // Sil butonunu konumlandırabilmek için relative yapıyoruz
-    
+
         const imgElement = document.createElement('img');
         imgElement.src = 'https://pbs.twimg.com/profile_images/763817533908582400/LzzU3vfp_400x400.jpg';
         imgElement.alt = 'Placeholder image';
         imgElement.style.maxWidth = '100%';  // Resmi taşırmamak için max-width veriyoruz
         imgElement.style.height = 'auto';  // Yükseklik otomatik olsun
-    
+
         imgContainer.appendChild(imgElement);  // Resmi kapsayıcıya ekle
         addDeleteButton(imgContainer);  // Kapsayıcıya sil butonu ekle
         addDragEvents(imgContainer);  // Sürükleme olayları ekle
@@ -111,7 +111,7 @@ function addDeleteButton(element) {
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'X';
     deleteBtn.classList.add('delete-btn'); // Sil butonuna class ekleyelim
-    deleteBtn.addEventListener('click', function() {
+    deleteBtn.addEventListener('click', function () {
         element.remove();  // Elementi DOM'dan kaldır
         updateHtmlOutput();  // HTML çıktısını güncelle
     });
